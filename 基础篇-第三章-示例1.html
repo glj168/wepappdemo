@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="图形系统开发实战:基础篇 示例">
+    <meta name="author" content="hjq">
+    <meta name="keywords" content="canvas,ladder,javascript,图形">
+    <script src="https://www.graphanywhere.com/examples/graph/canvas_1a/js/helper.js"></script>
+</head>
+
+<body style="overflow: hidden; margin:10px;">
+    <img id="imgSource" width="300px" height="300px"
+        src="https://www.graphanywhere.com/examples/graph/canvas_1a/images/abc.svg" style="display:none;" />
+    <canvas id="canvas" width="250" height="250"
+        style="border:solid 1px #CCCCCC; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);position: absolute; left: 40%; top: 30%;"></canvas>
+</body>
+<script>
+    imgSource.onload = function () {
+        // 从页面中获取画板对象
+        let canvas = document.getElementById('canvas');
+        // 从画板中获取“2D渲染上下文”对象
+        let ctx = canvas.getContext('2d');
+        // 绘制背景网格
+        drawGrid("lightgray", 10, 10, ctx);
+        // 在画布中绘制图像
+        let image = document.getElementById("imgSource");
+        ctx.drawImage(image, 50, 50);
+    }
+</script>
+
+</html>

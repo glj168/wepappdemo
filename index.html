@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开源软件项目运行托管</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('index.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .link-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .link-container a {
+            position: relative;
+            z-index: 2;
+            display: inline-block;
+            padding: 10px 20px;
+            color: black;
+            text-decoration: none;
+            margin-bottom: 10px;
+            color: white;
+
+        }
+
+        .link-container a :hover {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="link-container">
+        <a style="top: 388px;left: -3em;" href="#" onclick="openPage('基础篇-第三章-示例1.html')">
+            <h2>绘制图像示例</h2>
+        </a>
+        <a style="top: 333px;left: -3em;" href="#" onclick="openPage('firework.html')">
+            <h2>烟火动画示例</h2>
+        </a>
+    </div>
+</body>
+<script>
+    function openPage(page) {
+        window.open(page)
+    }
+</script>
+
+</html>
